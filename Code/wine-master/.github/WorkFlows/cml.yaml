@@ -1,4 +1,4 @@
-name: model-training
+name: model-wine-quality
 on: [push]
 jobs:
   run:
@@ -17,3 +17,5 @@ jobs:
           cat metrics.txt >> report.md
           cml-publish confusion_matrix.png --md >> report.md
           cml-send-comment report.md
+          echo "Model Metrics"
+          cat metrics.txt
