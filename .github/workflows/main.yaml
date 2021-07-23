@@ -17,6 +17,7 @@ jobs:
           cat metrics.txt >> report.md
           
           echo "Data Visualization" >> report.md
+          
           main publish feature_importance.png --md >> report.md
           main publish residuals.png --md >> report.md
           
