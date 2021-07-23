@@ -12,9 +12,9 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install -r requirements.txt
-          python Code/wine-master/train.py
+          python train.py
           
-          echo "****Welcome to Model Metrics****"
+          echo "****Welcome to Model Metrics****" >> report.md
           cat metrics.txt >> report.md
           
           echo "Data Visualization" >> report.md
